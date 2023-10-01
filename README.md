@@ -1,4 +1,14 @@
-# namasteReact
+# food card app
+-Header
+    -logo
+    -nav bar
+-Body
+    -search bar
+    -resturant card
+    -food card
+-footer
+    -copyright
+    -link
 
 # parcel
 -dev build

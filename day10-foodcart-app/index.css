@@ -1,0 +1,33 @@
+#heading{
+    color: red;
+    
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+.nav-bar > ul{
+    display: flex;
+}
+.nav-bar > ul > li{
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
+.image-logo > img{
+    height: 100px;
+    width: 100px;
+}
+.sear-bar{
+    padding: 10px;
+}
+.restro-container{
+    display: flex;
+    justify-content: space-between;
+}
+.restro-card{
+    width: 169px;
+    height: 220px;
+    border: 2px solid black;
+}

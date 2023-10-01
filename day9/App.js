@@ -2,17 +2,25 @@ import React from "react";
 import  ReactDOM  from "react-dom/client";
 //import  {ReactDOM}  from "react-dom/client"; // don't use beacause react-dom is exported defaultly
 
+const title = <h1>Hi i am react element</h1>
 
-//React element
-const jsxheading= <h1 id="heading">Wlcome jsx</h1>
-
-// React component
-
-const HeadingComponent = () =>{
-    return <h1 className="comp1">Namste React</h1>
+const Component = () =>{
+    return (
+        <h1>I am another component</h1>
+    )
 }
-
-const Heading = () =>  <h1 className="comp2">hello Heading without return<HeadingComponent /></h1>
+// valid perfect react component
+const Heading = () =>{
+    return (
+        <div>
+            {title}
+            {Component()}
+            <Component />
+            <Component></Component> 
+        <h1>Namste React day9</h1>
+        </div>
+    )
+}
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Heading />);
