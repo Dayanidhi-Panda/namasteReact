@@ -26,3 +26,9 @@
 -https
 -tree shacking - remove unused code
 -different build for dev and production
+
+# build parcel
+-npm install -d parcel
+
+# build the project
+-npm start
