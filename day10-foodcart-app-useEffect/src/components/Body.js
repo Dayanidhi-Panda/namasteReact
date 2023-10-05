@@ -1,11 +1,24 @@
 import Restrocard from "./Restro-card";
 import restObj from "../utils/mock"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 const Body = () =>{
 
     const [state, setState] = useState(restObj)
+
+    useEffect(()=>{
+        fetchData()
+    },[])
+
+    const fetchData = async() =>{
+        const response = await fetch(
+            "https://jsonplaceholder.typicode.com/posts"
+        )
+        const data = response.json();
+        console.log(data)
+        setState(data)
+    }
 
     return(
         
@@ -15,7 +28,7 @@ const Body = () =>{
                 setState(filterlist);
             }}>Filter by resturant</div>
             {
-               state.map((restcard)=><Restrocard key={restcard.name} restData={restcard}/>)
+               state.map((restcard)=><Restrocard key={restcard.id} restData={restcard}/>)
             }
         </div>
        
